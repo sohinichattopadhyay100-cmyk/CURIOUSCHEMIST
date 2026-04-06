@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computational Chemistry | Math Edition</title>
+    <style>
+        :root {
+            --grid-color: rgba(0, 100, 255, 0.1);
+            --bg-color: #fcfcfc;
+            --text-main: #1e293b;
+            --glass-bg: rgba(255, 255, 255, 0.8);
+            --primary: #2563eb;
+            --accent: #ef4444;
+        }
+
+        body {
+            margin: 0; padding: 0; color: var(--text-main);
+            background-color: var(--bg-color);
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 25px 25px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Nav Button Styling */
+        .nav-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .shape {
+            position: fixed; border-radius: 50%; filter: blur(50px); z-index: -1;
+            animation: float 20s infinite alternate; opacity: 0.3;
+        }
+        .s1 { width: 300px; height: 300px; background: #3b82f6; top: -50px; left: -50px; }
+        .s2 { width: 400px; height: 400px; background: #ec4899; bottom: -100px; right: -50px; }
+        
+        @keyframes float { 0% { transform: translate(0,0); } 100% { transform: translate(50px, 50px); } }
+
+        .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
+        
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        h1 { border-bottom: 3px solid var(--primary); display: inline-block; padding-bottom: 10px; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 15px;
+            text-align: left;
+        }
+        th { background: #f8fafc; color: var(--primary); }
+        tr:nth-child(even) { background: #f1f5f9; }
+
+        .tag { background: #dbeafe; color: #1e40af; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <div class="shape s1"></div>
+    <div class="shape s2"></div>
+
+    <div class="container">
+        
+        <!-- NEW CLICKABLE CONNECTION BUTTON -->
+        <a href="index.html" class="nav-link">← Back to Nobel Tracker</a>
+
+        <div class="glass-panel">
+            <h1>🔬 Computational Chemistry Software</h1>
+            <p>A comparison of top-tier tools used for molecular modeling and quantum simulations.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Software</th>
+                        <th>Core Functionality</th>
+                        <th>License Type</th>
+                        <th>Key Strengths</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Gaussian</strong></td>
+                        <td>Electronic Structure</td>
+                        <td>Commercial</td>
+                        <td>Standard for <span class="tag">Quantum Mechanics</span> calculations.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ORCA</strong></td>
+                        <td>Ab initio Quantum Chemistry</td>
+                        <td>Academic (Free)</td>
+                        <td>Highly optimized for <span class="tag">Spectroscopy</span> prediction.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Schrödinger Suite</strong></td>
+                        <td>Drug Discovery & Materials</td>
+                        <td>Commercial</td>
+                        <td>Elite <span class="tag">Graphical Interface</span> (Maestro).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>GROMACS</strong></td>
+                        <td>Molecular Dynamics</td>
+                        <td>Open Source (FOSS)</td>
+                        <td>Extremely fast for <span class="tag">Protein</span> simulations.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Quantum ESPRESSO</strong></td>
+                        <td>Electronic-Structure</td>
+                        <td>Open Source (FOSS)</td>
+                        <td>Best for <span class="tag">Materials Science</span> and periodic systems.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="glass-panel">
+            <h2>Recent Breakthroughs (2025-2026)</h2>
+            <ul>
+                <li><strong>AI-Accelerated Screening:</strong> Deep learning models now predict molecular properties 10,000x faster than traditional DFT.</li>
+                <li><strong>Quantum Edge:</strong> Real-world chemical simulations are beginning to run on hybrid quantum-classical hardware.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
