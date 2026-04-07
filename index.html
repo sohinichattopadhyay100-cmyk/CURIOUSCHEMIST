@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemistry Nobel Tracker</title>
+    <title>Chemistry Hub | Homepage</title>
     <style>
         :root {
             --primary: #2563eb;
@@ -23,6 +23,29 @@
 
         .container { max-width: 1100px; margin: auto; }
 
+        /* FIXED BUTTON STYLE */
+        .nav-container { text-align: center; margin-bottom: 25px; }
+
+        .software-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--primary);
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .software-btn:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+
         .glass-panel {
             background: var(--glass); backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -30,56 +53,38 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        /* NEW SOFTWARE LINK BUTTON */
-        .software-btn {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 12px 24px;
-            background-color: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .software-btn:hover {
-            background-color: #1d4ed8;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
-        }
-
-        /* Countdown Style */
         .countdown-container {
             text-align: center; background: var(--accent); color: white;
             padding: 20px; border-radius: 15px; margin-bottom: 30px;
         }
         #timer { font-size: 2.5rem; font-weight: bold; font-family: monospace; }
 
-        /* Table Style */
         table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; border-radius: 10px; overflow: hidden; }
         th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e2e8f0; }
         th { background: #f1f5f9; color: var(--primary); text-transform: uppercase; font-size: 0.85rem; }
-        tr:hover { background: #f8fafc; }
         
         .badge { background: #dbeafe; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; }
+
+        .footer-text {
+            text-align: center; margin-top: 50px; padding: 20px;
+            font-style: italic; border-top: 1px solid #e2e8f0; color: #64748b;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- LINK TO SOFTWARE COMPARISON PAGE -->
-        <a href="chemistry0342.html" class="software-btn">🔬 View Computational Software Comparison</a>
+        <!-- SINGLE BUTTON: EXPLORE SOFTWARE -->
+        <div class="nav-container">
+            <a href="chemistry.html" class="software-btn">🔬 Explore Computational Chemistry Software</a>
+        </div>
 
-        <!-- 2026 Countdown -->
         <div class="countdown-container">
             <h2>⏳ 2026 Nobel Prize in Chemistry Announcement</h2>
             <div id="timer">00d 00h 00m 00s</div>
-            <p>Target: Wednesday, 7 October 2026, 11:45 CEST</p>
+            <p>Target: Wednesday, 7 October 2026</p>
         </div>
 
-        <!-- Nobel Winners Table -->
         <div class="glass-panel">
             <h2>🏆 Recent Nobel Prize Laureates in Chemistry (2021-2025)</h2>
             <table>
@@ -92,60 +97,30 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>2025</td>
-                        <td>Susumu Kitagawa, Richard Robson, Omar Yaghi</td>
-                        <td><span class="badge">Material Science</span></td>
-                        <td>Development of <strong>Metal-Organic Frameworks (MOFs)</strong>.</td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td>David Baker, Demis Hassabis, John Jumper</td>
-                        <td><span class="badge">Computational / AI</span></td>
-                        <td>Computational protein design and <strong>AlphaFold</strong> protein structure prediction.</td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td>Moungi Bawendi, Louis Brus, Aleksey Yekimov</td>
-                        <td><span class="badge">Nanotechnology</span></td>
-                        <td>Discovery and synthesis of <strong>Quantum Dots</strong>.</td>
-                    </tr>
-                    <tr>
-                        <td>2022</td>
-                        <td>Carolyn Bertozzi, Morten Meldal, Barry Sharpless</td>
-                        <td><span class="badge">Synthetic Chemistry</span></td>
-                        <td>Development of <strong>Click Chemistry</strong> and bioorthogonal chemistry.</td>
-                    </tr>
-                    <tr>
-                        <td>2021</td>
-                        <td>Benjamin List, David MacMillan</td>
-                        <td><span class="badge">Catalysis</span></td>
-                        <td>Development of <strong>Asymmetric Organocatalysis</strong>.</td>
-                    </tr>
+                    <tr><td>2025</td><td>Kitagawa, Robson, Yaghi</td><td><span class="badge">Material Science</span></td><td>MOFs development.</td></tr>
+                    <tr><td>2024</td><td>Baker, Hassabis, Jumper</td><td><span class="badge">Computational</span></td><td>Protein structure prediction.</td></tr>
+                    <tr><td>2023</td><td>Bawendi, Brus, Yekimov</td><td><span class="badge">Nanotechnology</span></td><td>Quantum Dots synthesis.</td></tr>
+                    <tr><td>2022</td><td>Bertozzi, Meldal, Sharpless</td><td><span class="badge">Synthetic</span></td><td>Click Chemistry.</td></tr>
+                    <tr><td>2021</td><td>List, MacMillan</td><td><span class="badge">Catalysis</span></td><td>Asymmetric Organocatalysis.</td></tr>
                 </tbody>
             </table>
+        </div>
+
+        <div class="footer-text">
+            This Website has been generated by Sohini Chattopadhyay from Chemistry (CEMA) Department, Roll no.342 (Semester ll).
         </div>
     </div>
 
     <script>
-        // --- Countdown Timer Logic ---
         const targetDate = new Date("Oct 7, 2026 11:45:00").getTime();
-
         const timerInterval = setInterval(function() {
             const now = new Date().getTime();
             const distance = targetDate - now;
-
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
             document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-            if (distance < 0) {
-                clearInterval(timerInterval);
-                document.getElementById("timer").innerHTML = "ANNOUNCEMENT LIVE!";
-            }
         }, 1000);
     </script>
 </body>
